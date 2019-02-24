@@ -100,6 +100,30 @@ public:
 		}
 	}
 
+	void reverse()
+	{
+		int end = size -1;
+		for (int i = 0; i < (size / 2); i++)
+			swap(array[i], array[end--]);
+	}
+
+	bool removeRange(int start, int stop)
+	{
+		if (start<0 || start>=stop || stop>=size) return false;
+		for (int i = 0; i <= (stop - start); i++)
+			remove(start);
+
+		return true;
+	}
+
+	int searchElement(T value)
+	{
+		for (int i = 0; i < size; i++)
+			if (array[i] == value) return i;
+
+		return -1;
+	}
+
 	~ArrayList()
 	{
 		delete[] array;

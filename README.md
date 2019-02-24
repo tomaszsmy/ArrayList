@@ -61,6 +61,21 @@ zwraca tablicę typu T,
  `
 void shuffle()
 ` 
-ustawia elementy listy w losowej kolejności.
+ustawia elementy listy w losowej kolejności,
+
+`
+void reverse()
+` 
+odwraca kolejność elementów w liście,
+
+`
+bool removeRange(int start, int stop)
+` 
+usuwa elementy z podanego zakresu,
+
+`
+int searchElement(T value)
+` 
+zwraca indeks pod jakim znajduje się dana wartość/obiekt.
 
 
