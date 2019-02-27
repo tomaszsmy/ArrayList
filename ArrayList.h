@@ -124,6 +124,35 @@ public:
 		return -1;
 	}
 
+	bool contains(T value)
+	{
+		if(size>0)
+		{
+		for (int i = 0; i < size; i++)
+			if (array[i] == value) return true;
+		}
+		return false;
+	}
+
+	void removeDuplicates()
+	{
+		if (size >= 2)
+		{
+			int tempSize = size;
+			int *temp = new int[tempSize];
+			copy(temp, array);
+			this->clear();
+
+			for (int i = 0; i < tempSize; i++)
+			{
+				if (!this->contains(temp[i])) this->add(temp[i]);
+			
+			}
+				
+		}
+		
+	}
+
 	~ArrayList()
 	{
 		delete[] array;

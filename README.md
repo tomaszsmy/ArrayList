@@ -76,6 +76,15 @@ usuwa elementy z podanego zakresu,
 `
 int searchElement(T value)
 ` 
-zwraca indeks pod jakim znajduje się dana wartość/obiekt.
+zwraca indeks pod jakim znajduje się dana wartość/obiekt,
 
+`
+bool contains(T value)
+` 
+sprawdza czy wartość znajduje się w liście,
+
+`
+void removeDuplicates()
+` 
+usuwa duplikaty z listy.
 
