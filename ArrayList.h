@@ -26,12 +26,25 @@ public:
 		array = new T[factor];
 	}
 
+	ArrayList(int factor, T value)
+	{
+		if (factor <= 0) factor = 1;
+		size = 0;
+		this->factor = factor;
+		array = new T[factor];
+
+		for (int i = 0; i < factor; i++)
+			add(value);
+
+	}
+
 	ArrayList(const ArrayList &copy)
 	{
 		ArrayList(copy.size);
 		for (int i = 0; i < copy.size; i++)
 			this->add(copy.array[i]) ;
 	}
+
 
 	void add(T value )
 	{
@@ -55,7 +68,7 @@ public:
 
 	T get(int index)
 	{
-		if (index >= size || index < 0) return -1;
+		if (index >= size || index < 0) return "dsd";
 		return array[index];
 	}
 	

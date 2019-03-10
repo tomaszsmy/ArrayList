@@ -12,6 +12,11 @@ ArrayList(int factor)
  tworzy listę o podanej pojemności, minimum 1, <br>
  
  `
+ArrayList(int factor, T value)  
+` 
+ tworzy listę o podanej pojemności, minimum 1, wypełnioną wartoścami typu T <br>
+ 
+ `
 ArrayList(const ArrayList &copy) 
 ` 
  konstruktor kopiujący.
