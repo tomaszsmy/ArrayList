@@ -46,6 +46,11 @@ public:
 	}
 
 
+	T & operator[](int index) 
+	{ 
+		return array[index];
+	}
+
 	void add(T value )
 	{
 		if(size==factor) resize();
@@ -68,7 +73,7 @@ public:
 
 	T get(int index)
 	{
-		if (index >= size || index < 0) return "dsd";
+		if (index >= size || index < 0) return nullptr;
 		return array[index];
 	}
 	
